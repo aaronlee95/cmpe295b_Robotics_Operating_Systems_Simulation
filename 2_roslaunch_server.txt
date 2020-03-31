@@ -1,0 +1,52 @@
+aaron@aaron:~$ roscore
+... logging to /home/aaron/.ros/log/d1214cb8-6af2-11ea-a291-503eaa749114/roslaunch-aaron-7391.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+
+ 
+
+Unable to contact my own server at [http://192.168.2.2:38031/].
+This usually means that the network is not configured properly.
+
+A common cause is that the machine cannot ping itself.  Please check
+for errors by running:
+
+	ping 192.168.2.2
+
+For more tips, please see
+
+	http://www.ros.org/wiki/ROS/NetworkSetup
+
+The traceback for the exception was written to the log file
+
+aaron@aaron:~$ export ROS_HOSTNAME=192.168.1.34
+
+aaron@aaron:~$ roscore
+... logging to /home/aaron/.ros/log/3cf9b4ac-6af3-11ea-a291-503eaa749114/roslaunch-aaron-7477.log
+Checking log directory for disk usage. This may take awhile.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://192.168.1.34:34085/
+ros_comm version 1.12.14
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: kinetic
+ * /rosversion: 1.12.14
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [7487]
+ROS_MASTER_URI=http://192.168.1.34:11311/
+
+setting /run_id to 3cf9b4ac-6af3-11ea-a291-503eaa749114
+process[rosout-1]: started with pid [7500]
+started core service [/rosout]
+
