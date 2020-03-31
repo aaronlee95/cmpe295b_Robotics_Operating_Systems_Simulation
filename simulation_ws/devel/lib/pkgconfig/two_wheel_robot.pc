@@ -1,4 +1,4 @@
-prefix=/home/aaron/Desktop/ros/simulation_ws/devel
+prefix=/home/aaron/Desktop/cmpe295b_ROS/simulation_ws/devel
 
 Name: two_wheel_robot
 Description: Description of two_wheel_robot

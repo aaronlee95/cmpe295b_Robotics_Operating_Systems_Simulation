@@ -67,14 +67,14 @@ set(two_wheel_robot_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(two_wheel_robot_SOURCE_PREFIX /home/aaron/Desktop/ros/simulation_ws/src/two_wheel_robot)
-  set(two_wheel_robot_DEVEL_PREFIX /home/aaron/Desktop/ros/simulation_ws/devel)
+  set(two_wheel_robot_SOURCE_PREFIX /home/aaron/Desktop/cmpe295b_ROS/simulation_ws/src/two_wheel_robot)
+  set(two_wheel_robot_DEVEL_PREFIX /home/aaron/Desktop/cmpe295b_ROS/simulation_ws/devel)
   set(two_wheel_robot_INSTALL_PREFIX "")
   set(two_wheel_robot_PREFIX ${two_wheel_robot_DEVEL_PREFIX})
 else()
   set(two_wheel_robot_SOURCE_PREFIX "")
   set(two_wheel_robot_DEVEL_PREFIX "")
-  set(two_wheel_robot_INSTALL_PREFIX /home/aaron/Desktop/ros/simulation_ws/install)
+  set(two_wheel_robot_INSTALL_PREFIX /home/aaron/Desktop/cmpe295b_ROS/simulation_ws/install)
   set(two_wheel_robot_PREFIX ${two_wheel_robot_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/aaron/Desktop/ros/simulation_ws/install/lib;/home/aaron/Desktop/ros/simulation_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/aaron/Desktop/cmpe295b_ROS/simulation_ws/install/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

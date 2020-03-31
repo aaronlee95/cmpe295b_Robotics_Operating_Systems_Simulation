@@ -7,6 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export LD_LIBRARY_PATH="/opt/ros/kinetic/lib:/opt/ros/kinetic/lib/x86_64-linux-gnu"
-export PKG_CONFIG_PATH="/opt/ros/kinetic/lib/pkgconfig:/opt/ros/kinetic/lib/x86_64-linux-gnu/pkgconfig"
-export PWD="/home/aaron/Desktop/ros/simulation_ws/build"
+export CMAKE_PREFIX_PATH="/home/aaron/Desktop/cmpe295b_ROS/simulation_ws/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/aaron/Desktop/cmpe295b_ROS/simulation_ws/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/aaron/Desktop/cmpe295b_ROS/simulation_ws/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/aaron/Desktop/cmpe295b_ROS/simulation_ws/src:$ROS_PACKAGE_PATH"
