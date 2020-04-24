@@ -152,7 +152,8 @@
   </link>
   <joint name="front_joint_right_wheel" type="continuous">
   <!-- <joint name="front_joint_right_wheel" type="fixed"> -->
-    <origin rpy="0 0 0" xyz="0.15 0.15 0"/>
+    <!-- <origin rpy="0 0 0" xyz="0.15 0.15 0"/> -->
+    <origin rpy="0 0 0" xyz="0.45 0.15 0"/>
     <child link="front_link_right_wheel"/>
     <parent link="link_chassis"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>
@@ -181,7 +182,8 @@
   </link>
   <joint name="front_joint_left_wheel" type="continuous">
   <!-- <joint name="front_joint_left_wheel" type="fixed"> -->
-    <origin rpy="0 0 0" xyz="0.15 -0.15 0"/>
+    <!-- <origin rpy="0 0 0" xyz="0.15 -0.15 0"/> -->
+    <origin rpy="0 0 0" xyz="0.45 -0.15 0"/>
     <child link="front_link_left_wheel"/>
     <parent link="link_chassis"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="m2wr" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="two_wheel_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
   <material name="black">
     <color rgba="0.0 0.0 0.0 1.0"/>
   </material>
@@ -42,9 +42,11 @@
       <updateRate>20</updateRate>
       <leftJoint>joint_left_wheel</leftJoint>
       <rightJoint>joint_right_wheel</rightJoint>
+      <rightJoint>front_joint_right_wheel</rightJoint>
+      <leftJoint>front_joint_left_wheel</leftJoint>
       <wheelSeparation>0.2</wheelSeparation>
       <wheelDiameter>0.2</wheelDiameter>
-      <torque>0.1</torque>
+      <torque>0.5</torque>
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
@@ -63,7 +65,7 @@
     <!-- body -->
     <collision name="collision_chassis">
       <geometry>
-        <box size="0.5 0.3 0.07"/>
+        <box size="1.0 0.6 0.07"/>
       </geometry>
     </collision>
     <visual>
@@ -75,7 +77,7 @@
     </visual>
 
     <!-- caster front -->
-    <collision name="caster_front_collision">
+<!--     <collision name="caster_front_collision">
       <origin rpy=" 0 0 0" xyz="0.35 0 -0.05"/>
       <geometry>
         <sphere radius="0.05"/>
@@ -97,9 +99,9 @@
         <sphere radius="0.05"/>
       </geometry>
     </visual>
-
+ -->
     <!-- caster rear -->
-    <collision name="caster_front_collision">
+<!--     <collision name="caster_front_collision">
     <origin rpy=" 0 0 0" xyz="-0.35 0 -0.05"/>
       <geometry>
         <sphere radius="0.05"/>
@@ -121,7 +123,7 @@
         <sphere radius="0.05"/>
       </geometry>
     </visual>
-
+ -->
 
 
   </link>
@@ -130,7 +132,7 @@
   <link name="link_right_wheel">
     <inertial>
       <mass value="0.2"/>
-      <origin rpy="0 1.5707 1.5707" xyz="0.15 0.15 0"/>
+      <origin rpy="0 1.5707 1.5707" xyz="-0.15 0.15 0"/>
       <inertia ixx="0.000526666666667" ixy="0" ixz="0" iyy="0.000526666666667" iyz="0" izz="0.001"/>
     </inertial>
 
@@ -151,6 +153,7 @@
   </link>
 
   <joint name="joint_right_wheel" type="continuous">
+  <!-- <joint name="joint_right_wheel" type="fixed"> -->
     <origin rpy="0 0 0" xyz="-0.15 0.15 0"/>
     <child link="link_right_wheel"/>
     <parent link="link_chassis"/>
@@ -180,6 +183,7 @@
     </visual>
   </link>
   <joint name="joint_left_wheel" type="continuous">
+  <!-- <joint name="joint_left_wheel" type="fixed"> -->
     <origin rpy="0 0 0" xyz="-0.15 -0.15 0"/>
     <child link="link_left_wheel"/>
     <parent link="link_chassis"/>
@@ -208,7 +212,8 @@
       </geometry>
     </visual>
   </link>
-  <joint name="front_joint_right_wheel" type="continuous">
+  <!-- <joint name="front_joint_right_wheel" type="continuous"> -->
+  <joint name="front_joint_right_wheel" type="fixed">
     <origin rpy="0 0 0" xyz="0.15 0.15 0"/>
     <child link="front_link_right_wheel"/>
     <parent link="link_chassis"/>
@@ -237,7 +242,8 @@
       </geometry>
     </visual>
   </link>
-  <joint name="front_joint_left_wheel" type="continuous">
+  <!-- <joint name="front_joint_left_wheel" type="continuous"> -->
+  <joint name="front_joint_left_wheel" type="fixed">
     <origin rpy="0 0 0" xyz="0.15 -0.15 0"/>
     <child link="front_link_left_wheel"/>
     <parent link="link_chassis"/>

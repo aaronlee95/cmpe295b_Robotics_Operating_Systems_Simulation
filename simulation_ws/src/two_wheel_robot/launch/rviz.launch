@@ -1,7 +1,12 @@
 <?xml version="1.0"?>
 <launch>
 
-    <param name="robot_description" command="cat '$(find two_wheel_robot)/urdf/two_wheel_robot.xacro'"/>
+    <!-- <param name="robot_description" command="cat '$(find two_wheel_robot)/urdf/two_wheel_robot.xacro'"/> -->
+    <!-- <param name="robot_description" command="cat '$(find two_wheel_robot)/urdf/4_two_wheel_robot.xacro'"/> -->
+    <param name="robot_description" command="cat '$(find two_wheel_robot)/urdf/4_two_wheel_robot_revA.xacro'"/>
+
+    <!-- <param name="robot_description" command="cat '$(find two_wheel_robot)/urdf/01-diff_drive.xacro'"/> -->
+
 
     <!-- send fake joint values -->
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
